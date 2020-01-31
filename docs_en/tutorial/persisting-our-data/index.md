@@ -8,9 +8,6 @@ When a container runs, it uses the various layers from an image for its filesyst
 Each container also gets its own "scratch space" to create/update/remove files. Any
 changes won't be seen in another container, _even if_ they are using the same image.
 
-!!! todo
-    Image about filesystem here
-
 
 ### Seeing this in Practice
 
@@ -52,7 +49,7 @@ What you'll see is that the files created in one container aren't available in a
 
 ## Container Volumes
 
-With the previous experiment, we saw that each container is effectively read-only. While containers
+With the previous experiment, we saw that each container restarts from scratch from its image. While containers
 can create, update, and delete files, those changes are lost when the container is removed and are isolated
 to that container. With volumes, we can change all of this.
 
